@@ -1,0 +1,48 @@
+﻿@model InternshipManagement.Presentation.Models.sheet
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+<br />
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-5 card bg-light">
+            <br />
+            <p>
+                <b>Entreprise : </b>  @Html.DisplayFor(model => model.enterprise.name)
+            </p>
+
+            <p>
+                <b>Domain : </b>  @Html.DisplayFor(model => model.enterprise.domain)
+            </p>
+            <p>
+                <b>Date : </b>  @Html.DisplayFor(model => model.created)
+            </p>
+
+
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6 card bg-light">
+            <br />
+            <p>
+                <b>Title : </b>  @Html.DisplayFor(model => model.project_title)
+            </p>
+
+            <p>
+                <b>Problematique : </b>  @Html.DisplayFor(model => model.problematique)
+            </p>
+
+            <p>
+                <b>Categorie : </b>  @Html.DisplayFor(model => model.category.label)
+            </p>
+
+
+        </div>
+
+    </div>    
+
+
+
+</div>

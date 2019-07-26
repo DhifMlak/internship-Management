@@ -1,0 +1,58 @@
+﻿@model IEnumerable<InternshipManagement.Presentation.Models.sheet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.student_name)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.project_title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.problematique)
+            </th>
+            <th>
+                Note Encadrant
+            </th>
+            <th>
+                Note Rapporteur
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.student_name)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.project_title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.problematique)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.note_encadrant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.note_rapporteur)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+
+</table>

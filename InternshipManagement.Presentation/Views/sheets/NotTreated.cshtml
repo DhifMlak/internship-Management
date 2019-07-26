@@ -1,0 +1,60 @@
+﻿@model IEnumerable<InternshipManagement.Presentation.Models.sheet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.student_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.project_title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.problematique)
+            </th>
+
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.student_name)
+            </td>
+            <td>
+                @item.created.Value.ToShortDateString()
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.project_title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.problematique)
+            </td>
+
+
+
+            <td>
+
+                @Html.ActionLink("Accept", "Accept", new { id = item.id } , new { @class="btn btn-primary"}) <hr />
+                @Html.ActionLink("Refuse", "Refuse", new { id = item.id }, new { @class = "btn btn-danger" }) 
+
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>

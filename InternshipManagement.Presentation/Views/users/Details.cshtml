@@ -1,0 +1,114 @@
+﻿@model InternshipManagement.Presentation.Models.user
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>user</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.university.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.university.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.activated)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.activated)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.descriminator)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.descriminator)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.first_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.first_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.lang_key)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.lang_key)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.last_name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.last_name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.login)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.login)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.reset_key)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.reset_key)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.token)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.token)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

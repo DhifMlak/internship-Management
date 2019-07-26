@@ -1,0 +1,78 @@
+﻿@model IEnumerable<InternshipManagement.Presentation.Models.user>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+    <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    University
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.activated)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.first_name)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.last_name)
+                </th>
+
+
+
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.university.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.activated)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.first_name)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.last_name)
+            </td>
+
+
+
+
+            <td>
+                
+                @Html.ActionLink("voir fiche", "Details", "sheets", new { id = item.sheet_id }, new { @class="btn btn-primary"})
+            </td>
+        </tr>
+}
+        </tbody>
+    </table>
+</body>
+</html>
